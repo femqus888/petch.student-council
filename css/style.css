@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)),
+    url('../image/header.JPG');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: "Athiti" , sans-serif;
+    
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 70px 100vh 1fr 100px;
+}
+
+/* navbar */
+nav {
+    grid-area: nav;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    z-index: 30;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+nav li {
+    list-style-type: none;
+}
+nav a {
+    color: #fff;
+    text-decoration-line: none;
+}
+    /* เกี่ยวกับ ย่อย*/
+nav-about {
+    position: relative;
+    display: inline-block;
+}
+.multi-about {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 270px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 10;
+    
+}
+.multi-about a {
+    color: #000000;
+    text-decoration-line: none;
+    
+}
+.multi-about a:hover {
+    color: rgb(150, 2, 2);
+}
+nav-about:hover .multi-about {
+    display: block;
+}
+    
+    /* สมาชิก ย่อย*/
+nav-member {
+    position: relative;
+    display: inline-block;
+}
+.multi-member {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 240px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+.multi-member a {
+    color: #000000;
+    text-decoration-line: none;
+    
+}
+.multi-member a:hover {
+    color: rgb(150, 2, 2);
+}
+nav-member:hover .multi-member {
+    display: block;
+}
+
+    /* กิจกรรม ย่อย */
+nav-acti {
+    position: relative;
+    display: inline-block;
+}
+.multi-acti {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 120px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+.multi-acti a {
+    color: #000000;
+    text-decoration-line: none;
+    
+}
+.multi-acti a:hover {
+    color: rgb(150, 2, 2);
+}
+nav-acti:hover .multi-acti {
+    display: block;
+}
+    /* ติดต่อ ย่อย*/
+nav-con {
+    position: relative;
+    display: inline-block;
+}
+.multi-con {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 210px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+.multi-con a {
+    color: #000000;
+    text-decoration-line: none;
+    
+}
+.multi-con a:hover {
+    color: rgb(150, 2, 2);
+}
+nav-con:hover .multi-con {
+    display: block;
+}
+
+/* หน้าหลัก */
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+}
+header img {
+    width: 170px;
+    z-index: -1;
+}
+header h1 { 
+    color: #fff;
+    font-size: 3.125rem;
+}
+header h5 {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+/* ใส่เนื้อหา */
+main {
+    grid-area: main;
+    
+}
+
+    /* อัตลักษณ์ */
+.text-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 40px;
+
+}
+main h1 {
+    font-size: 3.75rem;
+    font-weight: 500;
+}
+main p {
+    font-size: 1.875rem;
+    font-weight: 300;
+}
+
+
+/* สีประจำโรงเรียน */
+#text-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 4, 63, 0.863), rgba(0, 4, 63, 0.863)),
+    url(../image/bg-2.JPG);
+    background-size: cover ;
+    padding: 30px;
+    line-height: 80px;
+}
+#text-2 h1 {
+    color: #fff;
+    font-size: 1.875rem;
+    font-weight: 300;
+}
+#color-block {
+    background : linear-gradient(to right,#009CFF 50%,#FF0000 50%);
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+/* ประชาสัมพันธ์ */
+#relation {
+    background-color: #fff;
+    padding: 30px;
+    
+}
+#relation h2 {
+    color: #000000;
+    font-size: 3.125rem;
+    font-weight: 500;
+}
+#relation h3 {
+    font-size: 1.875rem;
+}
+.relation {
+    display: flex;
+    align-items: top ;
+    gap: 20px;
+}
+.relation p {
+    font-size: 0.938rem;
+    align-self: center;
+    height: 100%;
+}
+
+/* เช่นเพชร */
+#text-3 {
+    display: flex;
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#text-3 p {
+    color: #fff;
+    font-size: 1.25rem;
+    text-align: center ;
+}
+
+/* สภา */
+#council {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 50px;
+    gap: 50px;
+}
+#council img {
+    width: 400px;
+    border-radius: 20px;
+}
+#council h2 {
+    width: 380px;
+    font-weight: 500;
+}
+#council p {
+    font-size: 0.9rem;
+    width: 300px;
+}
+
+/* calendar */
+#calendar {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+#calendar h3 {
+    font-weight: 500;
+    font-size: 1.875rem;
+}
+/* สามโลโก้ */
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 200px;
+}
+
+.logo3 {
+    width: 120px;
+}
+
+/* แจ้งปัญหา แผนที่ */
+#problem {
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* footer */
+footer {
+    grid-area: footer;
+}
+#footer {
+    background-image: linear-gradient(rgba(107, 8, 8, 0.788), rgba(107, 8, 8, 0.788)),
+    url(../image/footer.JPG);
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+#footer img {
+    width: 100px;
+}
+#footer span {
+    color: #fff;
+}
+#footer p {
+    margin-left: auto;
+    text-align: right;
+    width: 300px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 0.938rem;
+}
+
