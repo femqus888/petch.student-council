@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)),
+    url('../../image/president.JPG');
+    font-family: "Athiti" , sans-serif;
+    background-size: cover;
+}
+.do-container-query{
+    display: grid;
+    grid-template-areas: 
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: 70px 1fr 100px;
+    container-type: inline-size;
+    margin: auto;
+}
+/* navbar */
+nav {
+    grid-area: nav;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    z-index: 30;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+nav li {
+    list-style-type: none;
+}
+nav a {
+    color: #fff;
+    text-decoration-line: none;
+}
+li {
+    transition: transform 0.3s ease;
+}
+li:hover {
+    transform: translateY(-3px);
+
+}
+    /* เกี่ยวกับ ย่อย*/
+nav-about {
+    position: relative;
+    display: inline-block;
+    background-color: darkblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.multi-about {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 270px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 10;
+    
+}
+.multi-about a {
+    color: #000000;
+    text-decoration-line: none;
+    
+}
+.multi-about a:hover {
+    color: rgb(150, 2, 2);
+}
+nav-about:hover .multi-about {
+    display: block;
+}
+    
+    /* สมาชิก ย่อย*/
+nav-member {
+    position: relative;
+    display: inline-block;
+}
+.multi-member {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 240px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+.multi-member a {
+    color: #000000;
+    text-decoration-line: none;
+    
+}
+.multi-member a:hover {
+    color: rgb(150, 2, 2);
+}
+nav-member:hover .multi-member {
+    display: block;
+}
+
+    /* กิจกรรม ย่อย */
+nav-acti {
+    position: relative;
+    display: inline-block;
+}
+.multi-acti {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 120px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+.multi-acti a {
+    color: #000000;
+    text-decoration-line: none;
+    
+}
+.multi-acti a:hover {
+    color: rgb(150, 2, 2);
+}
+nav-acti:hover .multi-acti {
+    display: block;
+}
+    /* ติดต่อ ย่อย*/
+nav-con {
+    position: relative;
+    display: inline-block;
+}
+.multi-con {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 210px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+.multi-con a {
+    color: #000000;
+    text-decoration-line: none;
+    
+}
+.multi-con a:hover {
+    color: rgb(150, 2, 2);
+}
+nav-con:hover .multi-con {
+    display: block;
+}
+
+/* หน้าทำเนียบประธาน */
+main {
+    grid-area: main;
+}
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 30px;
+}
+#header h1,h3 {
+    font-weight: 500;
+}
+#header img {
+    width: 1200px;
+}
+#name-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* footer */
+footer {
+    grid-area: footer;
+}
+#footer {
+    background-image: linear-gradient(rgba(107, 8, 8, 0.788), rgba(107, 8, 8, 0.788)),
+    url(../../image/footer.JPG);
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+#footer img {
+    width: 100px;
+}
+#footer span {
+    color: #fff;
+}
+#footer p {
+    margin-left: auto;
+    text-align: right;
+    width: 300px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 0.838rem;
+}
