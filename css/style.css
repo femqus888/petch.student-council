@@ -65,7 +65,7 @@ nav-about {
     display: none;
     position: absolute;
     top: 100%;
-    width: 270px;
+    width: 220px;
     background-color: rgb(255, 255, 255);
     border: 1px solid #ffffff;
     padding: 10px;
@@ -179,7 +179,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 1vh;
+    height: 100%;
 }
 header img {
     width: 170px;
